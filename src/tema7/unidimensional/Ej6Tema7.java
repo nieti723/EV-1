@@ -1,18 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package tema7;
 
-/**
- *
- * @author juann
- */
+package tema7.unidimensional;
+
 public class Ej6Tema7 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         int[] num = new int[15];
         int ultimo = 0;

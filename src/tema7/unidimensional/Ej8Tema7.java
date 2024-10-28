@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package tema7;
+package tema7.unidimensional;
 
 /**
  *
@@ -20,18 +20,18 @@ public class Ej8Tema7 {
             tempMedia[i]= (int)(Math.random()*20)+8;
             for (int j = 0; j < tempMedia[i]; j++) {
                 if (j==0) {
-                    if (mes[i].equals("Septiembre") || mes[i].equals("Noviembre") || mes[i].equals("Diciembre")) {
-                        System.out.print(mes[i]+"\t");
+                    if (tempMedia[i]<10) {
+                        System.out.print(tempMedia[i]+" ºC - ");
                     }else{
-                        System.out.print(mes[i] + "\t\t");
+                        System.out.print(tempMedia[i] + "ºC - ");
                     }
                 }
                 System.out.print("*");
-                if (j==tempMedia[i]-1) {
-                    System.out.println(" - "+tempMedia[i] + "ºC");
-                }
             }
-            System.out.println("");
+            for (int j = tempMedia[i]; j < 40; j++) {
+                System.out.print(" ");
+            }
+            System.out.println(mes[i]);
         }
     }
 }

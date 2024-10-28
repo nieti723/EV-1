@@ -1,4 +1,4 @@
-package tema7;
+package tema7.unidimensional;
 
 public abstract class Ej9Tema7 {
     public static void main(String[] args) {
