@@ -1,14 +1,22 @@
 package tema7.bidimensional;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Ej2Tema7 {
-    public static void main(String[] args) {
+    @SuppressWarnings("resource")
+    public static void main(String[] args) throws InterruptedException, IOException {
+        Scanner s = new Scanner(System.in);
         int[][] num = new int[4][5];
         int sumaH = 0, sumaV = 0;
         for (int i = 0; i < num.length; i++) {
             for (int j = 0; j < num[0].length; j++) {
-                num[i][j] = (int)(Math.random()*11);
+                System.out.print("Introduce el valor nº" + (j+1) +" de la columna " +(i+1)+": " );
+                num[i][j] = s.nextInt();
             }
         }
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        System.out.println("TABLA: ");
         for (int i = 0; i < num.length; i++) {
             for (int j = 0; j < num[0].length; j++) {
                 System.out.print(num[i][j]+"\t\t");
