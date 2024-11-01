@@ -31,7 +31,7 @@ public class Ej5Tema7 {
             }
             System.out.println();
         }
-        System.out.println("El número máximo se encuentra en la columna "+ (posMax[1]+1)+" de la fila "+ (posMax[0]+1));
-        System.out.println("El número mínimo se encuentra en la columna "+ (posMin[1]+1)+" de la fila "+ (posMin[0]+1));
+        System.out.println("El número máximo se encuentra en la columna "+ (posMax[1]+1)+" de la fila "+ (posMax[0]+1) +": "+num[posMax[0]][posMax[1]]);
+        System.out.println("El número mínimo se encuentra en la columna "+ (posMin[1]+1)+" de la fila "+ (posMin[0]+1)+": "+num[posMin[0]][posMin[1]]);
     }
 }
