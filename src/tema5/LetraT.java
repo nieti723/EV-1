@@ -17,12 +17,14 @@ public class LetraT {
         int altura = 7;
         for (int i = 0; i < altura; i++) {
             for (int j = 0; j < altura; j++) {
-                if (i==0 || j==0) {
+                if (i == 0 || j == altura / 2) {
                     System.out.print("*");
+                } else {
+                    System.out.print(" ");
                 }
             }
             System.out.println("");
         }
     }
-    
+
 }
