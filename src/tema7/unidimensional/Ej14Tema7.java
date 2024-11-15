@@ -10,7 +10,7 @@ public class Ej14Tema7 {
         String colores[] = {"verde", "rojo", "azul", "amarillo", "naranja", "rosa", "negro", "blanco", "morado"};
         String[] aux = new String[8];
         int posPalabras = 0, posColor = 0;
-        Boolean color = false;
+        boolean color = false;
 
         for (int i = 0; i < palabras.length; i++) {
             System.out.print("Palabra " + (i+1) + ": ");
@@ -30,7 +30,7 @@ public class Ej14Tema7 {
                     color = true;
                 }
             }
-            if (color==true) {
+            if (color) {
                 posColor++;
             }else{
                 palabras[posPalabras] = aux[i];
