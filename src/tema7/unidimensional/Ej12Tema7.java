@@ -36,7 +36,7 @@ public class Ej12Tema7 {
             if (i==0) {
                 num[i] = aux[aux.length-1];
             }else{
-                num[i] = num[i] = aux[i-1];
+                num[i] = aux[i-1];
             }
         }
         System.out.println("Array final:");
