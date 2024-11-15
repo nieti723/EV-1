@@ -3,6 +3,7 @@ package tema7.unidimensional;
 import java.util.Scanner;
 
 public class Ej15Tema7 {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int[] ocupacion = new int[10];
