@@ -20,7 +20,7 @@ public class FuncionesMatematicas1_a_19 {
         @SuppressWarnings("resource")
         Scanner s = new Scanner(System.in);
         int opcion;
-        System.out.println("----------MENÚ----------");
+        System.out.println("-----------------------------------MENÚ---------------------------------------");
         System.out.println("1. Determina si un número introducido por teclado es capicúa o no (true/false)");
         System.out.println("2. Determina si un número introducido por teclado es primo o no (true/false)");
         System.out.println("3. Muestra el siguiente valor primo de uno introducido por teclado");

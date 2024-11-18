@@ -12,6 +12,7 @@ public class Pruebas {
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
         Scanner s = new Scanner(System.in);
         int num, exponente, opcion, metodo;
+        boolean continuar = true;
         FuncionesMatematicas1_a_19.presentacion();
         do {
             opcion = FuncionesMatematicas1_a_19.menu();
@@ -75,9 +76,9 @@ public class Pruebas {
                     new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
                     break;
                 default:
-                System.out.println("La opción introducida no es válida");
+                continuar=false;
                     break;
             }
-        } while (opcion!=6);
+        } while (continuar);
     }
 }
