@@ -1,27 +1,31 @@
 package tema7.bidimensional;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Ej8Tema7 {
     @SuppressWarnings("resource")
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException, IOException {
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
         Scanner s = new Scanner(System.in);
-        int[][] tablero = new int[8][8];
-        for (int i = tablero.length-1; i >= 0; i--) {
-            for (int j = tablero.length-1; j >= 0; j--) {
-                tablero[i][j]= j+1;
-            }
-        }
-        System.out.print("Introduzca la posición del alfil: ");
-        String posicion = s.nextLine();
-        int columna = (int)(posicion.charAt(0))-96;
-        int fila = (int)(posicion.charAt(1))-48;
+        String[][] tablero = new String[8][8];
+        String posicion;
+        int columna, fila;
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
-                System.out.print(columna+fila + " ");
+                tablero[i][j] = (char)(j+97) + "" + (8-i);
             }
-            System.out.println();
         }
-        System.out.println(tablero[fila][columna]);
+        System.out.print("Introduce la posición del alfil: ");
+        posicion = s.nextLine();
+        columna = (int)posicion.charAt(0)-97;
+        fila = (int)posicion.charAt(1)-50;
+        System.out.println("Fila: " + fila);
+        System.out.println("Columna: " + columna);
+        for (int i = 0; i < tablero.length; i++) {
+            for (int j = 0; j < tablero.length; j++) {
+                
+            }
+        }
     }
 }
