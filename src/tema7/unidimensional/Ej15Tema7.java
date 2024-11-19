@@ -58,8 +58,8 @@ public class Ej15Tema7 {
                 }
                 System.out.println();
                 System.out.print("Ocupación\t");
-                for (int i = 0; i < ocupacion.length; i++) {
-                    System.out.print(ocupacion[i] + "\t");
+                for (int i : ocupacion) {
+                    System.out.print(i + "\t");
                 }
             }
         } while (grupo != -1);
