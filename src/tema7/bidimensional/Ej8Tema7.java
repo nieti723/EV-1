@@ -20,6 +20,7 @@ public class Ej8Tema7 {
         posicion = s.nextLine();
         columna = (int)posicion.charAt(0)-97;
         fila = (int)posicion.charAt(1)-50;
+        System.out.println(fila + " " + columna);
         System.out.println("Fila: " + fila);
         System.out.println("Columna: " + columna);
         for (int i = 0; i < tablero.length; i++) {
