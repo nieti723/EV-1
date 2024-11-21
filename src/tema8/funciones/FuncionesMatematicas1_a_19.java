@@ -120,8 +120,8 @@ public class FuncionesMatematicas1_a_19 {
     }
 
     public static int digitoN(int num, int n){
-        num = num%(int)(Math.pow(10, n+1));
-        num= num/(int)(Math.pow(10, digitos(num)-(n+1)));
+        num = num%(int)(Math.pow(10, n));
+        num= num/(int)(Math.pow(10, digitos(num)-(n-1)));
         return num;
     }
 }
