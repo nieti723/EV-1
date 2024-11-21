@@ -6,24 +6,29 @@ public class Ej6Tema7 {
         int[] posMin = new int[2];
         int[] posMax = new int[2];
         int[][] num = new int[6][10];
+        int rep = 0;
         boolean nuevo = false;
         for (int i = 0; i < num.length; i++) {
             for (int j = 0; j < num[0].length; j++) {
                 if (j == 0 && i == 0) {
-                    num[i][j] = (int) (Math.random() * 1001);
+                    num[i][j] = (int) (Math.random() * 59);
                 } else {
                     do {
-                        num[i][j] = (int) (Math.random() * 1001);
-                        for (int j2 = i; j2 >= 0; j2--) {
-                            for (int k = j; k >= 0; k--) {
-                                if (num[i][j] == num[j2][k]) {
-                                    nuevo = false;
-                                } else {
-                                    nuevo = true;
+                        rep = 0;
+                        num[i][j] = (int) (Math.random() * 59);
+                        for (int j2 = 0; j2 < num.length && rep<2; j2++) {
+                            for (int k = 0; k < num[0].length && rep<2; k++) {
+                                if (num[i][j]==num[j2][k]) {
+                                    rep++;
                                 }
                             }
                         }
-                    } while (nuevo == false);
+                        if (rep>1) {
+                            nuevo = false;
+                        }else{
+                            nuevo = true;
+                        }
+                    } while (!nuevo);
                 }
             }
         }

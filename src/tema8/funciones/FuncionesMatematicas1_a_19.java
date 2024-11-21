@@ -26,18 +26,35 @@ public class FuncionesMatematicas1_a_19 {
         System.out.println("3. Muestra el siguiente valor primo de uno introducido por teclado");
         System.out.println("4. Muestra el resultado de la potencia de una base y un exponente introducidos por teclado");
         System.out.println("5. Muestra la cantidad de dígitos de un número introducido por teclado");
-        System.out.println("6. Salir");
+        System.out.println("6. Voltea un número introducido por teclado");
+        System.out.println("7. Salir");
+        System.out.println("8. Salir");
+        System.out.println("9. Salir");
+        System.out.println("10. Salir");
+        System.out.println("11. Salir");
+        System.out.println("12. Salir");
+        System.out.println("13. Salir");
+        System.out.println("14. Salir");
+        System.out.println("15. Salir");
         System.out.print("Escoja una opción: ");
         opcion = s.nextInt();
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
         return opcion;
     }
 
+    @SuppressWarnings("resource")
+    public static void salir() throws InterruptedException, IOException{
+        Scanner s = new Scanner(System.in);
+        System.out.print("Pulse una tecla para continuar: ");
+        s.nextLine();
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+    }
+
     public static boolean esCapicua(int num){
         int volteado = 0, residuo = num;
         for (int i = 1; i <= digitos(num); i++) {
             volteado+= residuo%10*((int)(Math.pow(10, digitos(num)-i)));
-            residuo = residuo/10;
+            residuo/= 10;
         }
         if (volteado==num) {
             return true;
@@ -91,5 +108,20 @@ public class FuncionesMatematicas1_a_19 {
             dig++;
         }
         return dig;
+    }
+
+    public static int volteaNumero(int num){
+        int volteado = 0, residuo = num;
+        for (int i = 1; i <= digitos(num); i++) {
+            volteado+= residuo%10*((int)(Math.pow(10, digitos(num)-i)));
+            residuo/= 10;
+        }
+        return volteado;
+    }
+
+    public static int digitoN(int num, int n){
+        num = num%(int)(Math.pow(10, n+1));
+        num= num/(int)(Math.pow(10, digitos(num)-(n+1)));
+        return num;
     }
 }

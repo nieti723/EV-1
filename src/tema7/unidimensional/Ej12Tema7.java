@@ -12,9 +12,8 @@ public class Ej12Tema7 {
         int[] aux = new int[num.length];
         //Cargamos el array
         for (int i = 0; i < num.length; i++) {
-            int valor = (int) (Math.random()*41);
-            num[i] = valor;
-            aux[i] = valor;
+            num[i] = (int) (Math.random()*41);
+            aux[i] = num[i];
         }
         System.out.println("Array inicial:");
         for (int i = 0; i < num.length; i++) {
