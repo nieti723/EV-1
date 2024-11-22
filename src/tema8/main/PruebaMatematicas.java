@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import tema8.funciones.FuncionesMatematicas1_a_19;
 
-public class Pruebas {
+public class PruebaMatematicas {
 
     @SuppressWarnings("resource")
     public static void main(String[] args) throws InterruptedException, IOException {
@@ -84,6 +84,54 @@ public class Pruebas {
                     cantidad = s.nextInt();
                     System.out.println("Número original: " + num);
                     System.out.println("Número con " + cantidad + " digito(s) retirado(s) " + FuncionesMatematicas1_a_19.quitaDelante(num, cantidad));
+                    FuncionesMatematicas1_a_19.salir();
+                    break;
+                case 11:
+                    System.out.print("Introduce el dígito a añadir: ");
+                    dig = s.nextInt();
+                    System.out.println("Número original: " + num);
+                    System.out.println("Número modificado: " + FuncionesMatematicas1_a_19.pegaDetras(num, dig));
+                    FuncionesMatematicas1_a_19.salir();
+                    break;
+                case 12:
+                    System.out.print("Introduce el dígito a añadir: ");
+                    dig = s.nextInt();
+                    System.out.println("Número original: " + num);
+                    System.out.println("Número modificado: " + FuncionesMatematicas1_a_19.pegaDelante(num, dig));
+                    FuncionesMatematicas1_a_19.salir();
+                    break;
+                case 13:
+                int ini = 0, ult = 0;
+                    do {
+                        System.out.print("Introduzca la posición inicial: ");
+                        ini = s.nextInt();
+                        System.out.print("Introduzca la posición final: ");
+                        ult = s.nextInt();
+                        if (ini>ult) {
+                            System.out.println("El valor inicial no puede ser mayor al valor final");
+                        }
+                    } while (ini>ult);
+                    System.out.println("Número original: " + num);
+                    System.out.println("Número desde la posición " + ini + " hasta la posición " + ult + ": " +  FuncionesMatematicas1_a_19.trozoNumero(num, ini, ult));
+                    FuncionesMatematicas1_a_19.salir();
+                    break;
+                case 14:
+                    int num2 = 0;
+                    System.out.print("Introduce el segundo número: ");
+                    num2 = s.nextInt();
+                    System.out.println("Número 1: " + num);
+                    System.out.println("Número 2: " + num2);
+                    System.out.println("Concatenación: " + FuncionesMatematicas1_a_19.juntaNumeros(num, num2));
+                    FuncionesMatematicas1_a_19.salir();
+                    break;
+                case 15:
+                    FuncionesMatematicas1_a_19.muestraPrimos();
+                    System.out.println();
+                    FuncionesMatematicas1_a_19.salir();
+                    break;
+                case 16:
+                    FuncionesMatematicas1_a_19.muestraCapicua();
+                    System.out.println();
                     FuncionesMatematicas1_a_19.salir();
                     break;
                 default:

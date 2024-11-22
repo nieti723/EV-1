@@ -6,7 +6,7 @@ public class Ej6Tema7 {
         int[] posMin = new int[2];
         int[] posMax = new int[2];
         int[][] num = new int[6][10];
-        int rep = 0;
+        int rep;
         boolean nuevo = false;
         for (int i = 0; i < num.length; i++) {
             for (int j = 0; j < num[0].length; j++) {

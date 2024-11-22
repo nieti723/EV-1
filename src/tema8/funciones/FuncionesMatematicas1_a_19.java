@@ -34,11 +34,13 @@ public class FuncionesMatematicas1_a_19 {
                 .println("8. Da la posición de la primer ocurrencia de un dígito introducido por teclado de un número");
         System.out.println("9. Retira n dígitos por detrás de un número introducido por teclado");
         System.out.println("10. Retira n dígitos por delante de un número introducido por teclado");
-        System.out.println("11. Salir");
-        System.out.println("12. Salir");
-        System.out.println("13. Salir");
-        System.out.println("14. Salir");
-        System.out.println("15. Salir");
+        System.out.println("11. Añade un dígito n por detrás al número introducido");
+        System.out.println("12. Añade un dígito n por delante al número introducido");
+        System.out.println("13. Devuelve los dígitos de un intervalo introducido por teclado");
+        System.out.println("14. Pega dos números para formar uno");
+        System.out.println("15. Miestra los números primos entre 1 y 1000");
+        System.out.println("16. Muestra los número capicúa entre 1 y 99999");
+        System.out.println("17. Salir");
         System.out.print("Escoja una opción: ");
         opcion = s.nextInt();
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
@@ -154,5 +156,43 @@ public class FuncionesMatematicas1_a_19 {
     public static int quitaDelante(int num, int cantidad) {
         num %= (int) (Math.pow(10, digitos(num) - cantidad));
         return num;
+    }
+
+    public static int pegaDetras(int num, int dig){
+        num = (num*10) + dig;
+        return num;
+    }
+
+    public static int pegaDelante(int num, int dig){
+        num = num + ((int)Math.pow(10, digitos(num))*dig);
+        return num;
+    }
+
+
+    public static int trozoNumero(int num, int ini, int ult){
+        num /= (int)(Math.pow(10, digitos(num)-(ult+1)));
+        num %= (int)(Math.pow(10, ini));
+        return num;
+    }
+
+    public static int juntaNumeros(int num, int num2){
+        num = num2 + (num*(int)(Math.pow(10, digitos(num2))));
+        return num;
+    }
+
+    public static void muestraPrimos(){
+        for (int i = 1; i <= 1000; i++) {
+            if (esPrimo(i)) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+    public static void muestraCapicua(){
+        for (int i = 1; i <= 99999; i++) {
+            if (esCapicua(i)) {
+                System.out.print(i + " ");
+            }
+        }
     }
 }
