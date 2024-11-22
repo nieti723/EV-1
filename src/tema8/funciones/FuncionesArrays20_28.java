@@ -83,7 +83,7 @@ public class FuncionesArrays20_28 {
         for (int i = 0; i < array.length; i++) {
             suma += array[i];
         }
-        return suma/tamaño;
+        return (double)suma/tamaño;
     }
 
     public static boolean estaEnArrayInt(int[] array, int comprobar){
