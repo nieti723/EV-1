@@ -1,4 +1,4 @@
-package tema8.funciones;
+package tema8_1.funciones;
 
 import java.io.IOException;
 import java.util.Scanner;

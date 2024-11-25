@@ -1,9 +1,9 @@
-package tema8.main;
+package tema8_1.main;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-import tema8.funciones.FuncionesMatematicas1_a_19;
+import tema8_1.funciones.FuncionesMatematicas1_a_19;
 
 public class PruebaMatematicas {
 

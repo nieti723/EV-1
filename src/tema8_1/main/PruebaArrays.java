@@ -1,9 +1,9 @@
-package tema8.main;
+package tema8_1.main;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-import tema8.funciones.FuncionesArrays20_28;
+import tema8_1.funciones.FuncionesArrays20_28;
 
 public class PruebaArrays {
     @SuppressWarnings("resource")
