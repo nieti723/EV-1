@@ -31,10 +31,7 @@ public class PruebaArrays {
         //Mostramos el menú
         do {
             System.out.println("Array generado: ");
-            FuncionesArrays20_28.mostrarArray(aux);
-            for (int i = 0; i < aux.length; i++) {
-                array[i] = aux[i];
-            }
+            FuncionesArrays20_28.mostrarArray(array);
             opcion = FuncionesArrays20_28.menu();
             switch (opcion) {
                 case 1:
@@ -69,7 +66,7 @@ public class PruebaArrays {
                     System.out.println("Array original: ");
                     FuncionesArrays20_28.mostrarArray(array);
                     System.out.println("Array volteado: ");
-                    FuncionesArrays20_28.mostrarArray(FuncionesArrays20_28.volteaArrayInt(array));
+                    FuncionesArrays20_28.volteaArrayInt(array);
                     FuncionesArrays20_28.salir();
                     break;    
                 case 7:
@@ -78,7 +75,7 @@ public class PruebaArrays {
                     System.out.println("Array original:");
                     FuncionesArrays20_28.mostrarArray(array);
                     System.out.println("Array volteado:");
-                    FuncionesArrays20_28.mostrarArray(FuncionesArrays20_28.rotaDerechaArrayInt(array, posiciones));
+                    FuncionesArrays20_28.rotaDerechaArrayInt(array, posiciones);
                     FuncionesArrays20_28.salir();
                     break;
                 case 8:
@@ -87,7 +84,7 @@ public class PruebaArrays {
                     System.out.println("Array original:");
                     FuncionesArrays20_28.mostrarArray(array);
                     System.out.println("Array volteado:");
-                    FuncionesArrays20_28.mostrarArray(FuncionesArrays20_28.rotaIzquierdaArrayInt(array, posiciones));
+                    FuncionesArrays20_28.rotaIzquierdaArrayInt(array, posiciones);
                     FuncionesArrays20_28.salir();
                     break;
                 default:

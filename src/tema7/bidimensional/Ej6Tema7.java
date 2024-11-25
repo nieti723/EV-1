@@ -10,12 +10,15 @@ public class Ej6Tema7 {
         boolean nuevo = false;
         for (int i = 0; i < num.length; i++) {
             for (int j = 0; j < num[0].length; j++) {
+                // En la primera posición, como no hay números y va a ser nuevo no hace falta comprobar nada
                 if (j == 0 && i == 0) {
-                    num[i][j] = (int) (Math.random() * 59);
-                } else {
+                    num[i][j] = (int) (Math.random() * 1001);
+                } else { // A partir del 0,0 empezamos a comprobar si el número generado se repite
                     do {
+                        // Contador para ver cuantas veces se repite
                         rep = 0;
-                        num[i][j] = (int) (Math.random() * 59);
+                        num[i][j] = (int) (Math.random() * 1001);
+                        // Comprobamos si el número se repite más de una vez, ya que al pasar por la posición actual, ya tenemos que rep=1
                         for (int j2 = 0; j2 < num.length && rep<2; j2++) {
                             for (int k = 0; k < num[0].length && rep<2; k++) {
                                 if (num[i][j]==num[j2][k]) {
@@ -23,6 +26,7 @@ public class Ej6Tema7 {
                                 }
                             }
                         }
+                        // Cambia el valor de la bandera según las veces que se repita el número
                         if (rep>1) {
                             nuevo = false;
                         }else{

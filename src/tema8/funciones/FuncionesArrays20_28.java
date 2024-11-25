@@ -104,17 +104,17 @@ public class FuncionesArrays20_28 {
         return -1;
     }
 
-    public static int[] volteaArrayInt(int[] array){
+    public static void volteaArrayInt(int[] array){
         int cont = 0;
         int[] aux = new int[array.length];
         for (int i = array.length-1; i >= 0; i--) {
             aux[cont] = array[i];
             cont++;
         }
-        return aux;
+        mostrarArray(aux);
     }
 
-    public static int[] rotaDerechaArrayInt(int[] array, int posiciones){
+    public static void rotaDerechaArrayInt(int[] array, int posiciones){
         int[] aux = new int[array.length];
         for (int i = 0; i < aux.length; i++) {
             aux[i] = array[i];
@@ -125,10 +125,10 @@ public class FuncionesArrays20_28 {
         for (int i = 0; i < posiciones; i++) {
             array[i] = aux[array.length-posiciones+i];
         }
-        return array;
+        mostrarArray(array);
     }
 
-    public static int[] rotaIzquierdaArrayInt(int[] array, int posiciones){
+    public static void rotaIzquierdaArrayInt(int[] array, int posiciones){
         int[] aux = new int[array.length];
         int cont = 0;
         for (int i = 0; i < aux.length; i++) {
@@ -141,7 +141,7 @@ public class FuncionesArrays20_28 {
             array[i] = aux[cont];
             cont++;
         }
-        return array;
+        mostrarArray(array);
     }
 
 }
