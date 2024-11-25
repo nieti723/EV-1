@@ -62,9 +62,6 @@ public class FuncionesArraysB29_34 {
     }
 
     public static void filaArray(int[][] array, int fila, int columnas) throws InterruptedException, IOException{
-        System.out.println("Array generado: ");
-        muestraArrayBi(array);
-        System.out.println();
         System.out.print("Fila " + fila + ": ");
         for (int i = 0; i < columnas; i++) {
             System.out.print(array[fila][i] + " ");
@@ -74,9 +71,6 @@ public class FuncionesArraysB29_34 {
     }
 
     public static void columnaArray(int[][] array, int columna, int filas) throws InterruptedException, IOException{
-        System.out.println("Array generado: ");
-        muestraArrayBi(array);
-        System.out.println();
         System.out.print("Columna " + columna + ": ");
         for (int i = 0; i < filas; i++) {
             System.out.print(array[i][columna] + " ");
@@ -105,4 +99,58 @@ public class FuncionesArraysB29_34 {
             return posEncontrado;
         }
     }
+
+    public static boolean esPuntoDeSilla(int[][] array, int num, int filas, int columnas){
+        int fila = 0, columna = 0;
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                if (array[i][j] == num) {
+                    fila = i;
+                    columna = j;
+                }
+            }
+        }
+
+        for (int i = 0; i < columnas; i++) {
+            if (array[fila][i] < num) {
+                return false;
+            }
+        }
+
+        for (int i = 0; i < fila; i++) {
+            if (array[i][columna] > num) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static int[] diagonal(int[][] array, int filas, int columnas, String direccion){
+        int[] diagonal = new int[columnas];
+        int cont = 0, contD = columnas-1;
+        switch (direccion) {
+            case "nose":
+                for (int i = 0; i < filas; i++) {
+                    for (int j = 0; j < columnas; j++) {
+                        if (i==j) {
+                            diagonal[cont] = array[i][j];
+                            cont++;
+                        }
+                    }
+                }
+                break;
+            case "neso":
+            for (int i = 0; i < filas; i++) {
+                for (int j = 0; j < columnas; j++) {
+                    if (j==contD) {
+                        diagonal[cont] = array[i][j];
+                        cont++;
+                    }
+                }
+                contD--;
+            }
+                break;
+            }
+            return diagonal;
+        }
 }

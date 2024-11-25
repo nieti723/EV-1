@@ -30,22 +30,62 @@ public class PruebaArraysB {
             op = FuncionesArraysB29_34.menu();
             switch (op) {
                 case 1:
+                    System.out.println("Array generado: ");
+                    FuncionesArraysB29_34.muestraArrayBi(array);
                     System.out.print("Introduce la fila a mostrar: ");
                     int fila = s.nextInt();
                     FuncionesArraysB29_34.filaArray(array, fila, columnas);
                     break;
                 case 2:
+                    System.out.println("Array generado: ");
+                    FuncionesArraysB29_34.muestraArrayBi(array);
                     System.out.print("Introduce la fila a mostrar: ");
                     int columna = s.nextInt();
                     FuncionesArraysB29_34.columnaArray(array, columna, filas);
                     break;
                 case 3:
+                    System.out.println("Array generado: ");
+                    FuncionesArraysB29_34.muestraArrayBi(array);
                     System.out.print("Introduce el número a buscar: ");
                     int buscar = s.nextInt();
                     int[] encontrado = FuncionesArraysB29_34.coordenadasArray(array, buscar, filas, columnas);
                     System.out.println("El número " + buscar + " se encuentra en el array en la posición " + encontrado[0] + ", " + encontrado[1]);
+                    FuncionesArraysB29_34.salir();
+                    break;
+                case 4:
                     System.out.println("Array generado: ");
                     FuncionesArraysB29_34.muestraArrayBi(array);
+                    System.out.print("Introduce el valor a comprobar: ");
+                    int num = s.nextInt();
+                    if (FuncionesArraysB29_34.esPuntoDeSilla(array, num, filas, columnas)) {
+                        System.out.println("El valor introducido es punto de silla");
+                    }else{
+                        System.out.println("El valor introducido no es punto de silla");
+                    }
+                    FuncionesArraysB29_34.salir();
+                    break;
+                case 5:
+                    s.nextLine();
+                    System.out.println("Array generado: ");
+                    FuncionesArraysB29_34.muestraArrayBi(array);
+                    String diagonal = "";
+                    do {
+                        System.out.println("1. Escriba \"nose\" para la diagonal que va desde noroeste hasta sureste");
+                        System.out.println("2. Escriba \"neso\" para la diagonal que va desde noreste hasta suroeste");
+                        diagonal = s.nextLine();
+                        if (!diagonal.equals("neso") && !diagonal.equals("nose")) {
+                            System.out.println("Opción incorrecta, inténtelo de nuevo.");
+                            FuncionesArraysB29_34.salir();
+                        }
+                    } while (!diagonal.equals("neso") && !diagonal.equals("nose"));
+                    System.out.println("Array generado: ");
+                    FuncionesArraysB29_34.muestraArrayBi(array);
+                    int[] diagonalArray = FuncionesArraysB29_34.diagonal(array, filas, columnas, diagonal);
+                    System.out.println("Array diagonal:");
+                    for (int i : diagonalArray) {
+                        System.out.print(i + " ");
+                    }
+                    System.out.println();
                     FuncionesArraysB29_34.salir();
                     break;
                 default:
