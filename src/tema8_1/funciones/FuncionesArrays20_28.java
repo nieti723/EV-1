@@ -116,12 +116,15 @@ public class FuncionesArrays20_28 {
 
     public static void rotaDerechaArrayInt(int[] array, int posiciones){
         int[] aux = new int[array.length];
+        // Copia el array introducido en aux
         for (int i = 0; i < aux.length; i++) {
             aux[i] = array[i];
         }
+        // Rota las posiciones desde 0 hastala longitud del array menos las cantidad de posiciones a rotar
         for (int i = 0; i < aux.length-posiciones; i++) {
             array[i+posiciones] = aux[i];
         }
+        // Rota las posiciones restantes de array
         for (int i = 0; i < posiciones; i++) {
             array[i] = aux[array.length-posiciones+i];
         }

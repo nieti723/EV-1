@@ -125,6 +125,7 @@ public class FuncionesMatematicas1_a_19 {
     }
 
     public static int digitoN(int num, int n) {
+        // Primero divimos entre 10 elevado a la cantidad de dígitos menos n (posición del número elegida por el usuario) + 1 (ya que empezamos en 0)
         num = num / (int) (Math.pow(10, digitos(num) - (n + 1)));
         num = num % 10;
         return num;
