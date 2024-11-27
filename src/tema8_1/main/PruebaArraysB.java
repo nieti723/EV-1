@@ -9,7 +9,7 @@ public class PruebaArraysB {
     @SuppressWarnings("resource")
     public static void main(String[] args) throws InterruptedException, IOException {
         Scanner s = new Scanner(System.in);
-        int filas, columnas, inicio, ultimo, op;
+        int filas, columnas, inicio, ultimo, op, cont = 0;
         boolean continuar = true;
 
         FuncionesArraysB29_34.presentacion();
@@ -65,7 +65,10 @@ public class PruebaArraysB {
                     FuncionesArraysB29_34.salir();
                     break;
                 case 5:
-                    s.nextLine();
+                    if (cont==0) {
+                        s.nextLine();
+                        cont++;
+                    }
                     System.out.println("Array generado: ");
                     FuncionesArraysB29_34.muestraArrayBi(array);
                     String diagonal = "";
