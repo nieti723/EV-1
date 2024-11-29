@@ -1,4 +1,4 @@
-package tema8_2;
+package tema8_2.boletin1;
 
 import java.util.Scanner;
 

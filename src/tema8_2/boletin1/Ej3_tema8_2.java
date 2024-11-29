@@ -1,8 +1,8 @@
-package tema8_2;
+package tema8_2.boletin1;
 
 import java.util.Scanner;
 
-public class Ej2_tema8_2 {
+public class Ej3_tema8_2 {
     @SuppressWarnings("resource")
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -12,10 +12,12 @@ public class Ej2_tema8_2 {
             System.out.print(nombre + " ");
         }
         System.out.println();
-        System.out.print("Introduzca el filtro: ");
-        String filtro = s.nextLine().toLowerCase();
+        System.out.print("Introduzca el filtro de incio: ");
+        String filtroInicio = s.nextLine().toLowerCase();
+        System.out.print("Introduzca el filtro de fin: ");
+        String filtroFin = s.nextLine().toLowerCase();
         for (String nombre : nombres) {
-            if (nombre.toLowerCase().startsWith(filtro)) {
+            if (nombre.toLowerCase().startsWith(filtroInicio) && nombre.toLowerCase().endsWith(filtroFin)) {
                 System.out.print(nombre + " ");
             }
         }
