@@ -7,13 +7,24 @@ public class Boligrafo {
     double pesoEnGramos = 27;
     boolean tieneRecambio = false;
 
-
-
     public Boligrafo() {
     }
 
-    public Boligrafo(String color, double precio){
+    public Boligrafo(double precio) {
+        this.precio = precio;
+        color = "amarillo";
+    }
+
+    public Boligrafo(String color, double precio) {
         this.color = color;
+        this.precio = precio;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
@@ -23,9 +34,11 @@ public class Boligrafo {
                 + pesoEnGramos + ", tieneRecambio=" + tieneRecambio + "]";
     }
 
-
-
-    public static void pinta(){
+    public static void pinta() {
         System.out.println("Estoy pintando");
+    }
+
+    public void rebaja(){
+        this.precio *= 0.5;
     }
 }
