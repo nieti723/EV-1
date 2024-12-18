@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Ej5_tema8_2 {
     @SuppressWarnings("resource")
     public static void main(String[] args) throws InterruptedException, IOException {
-        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
         Scanner s = new Scanner(System.in, "Windows-1252");
 
         String texto, frase1, frase2;
@@ -39,8 +38,6 @@ public class Ej5_tema8_2 {
         if (frase2.charAt(0)==' ') {
             frase2 = frase2.substring(1);
         }
-        System.out.println(frase1);
-        System.out.println(frase2);
         String[] palabras1 = frase1.split(" ");
         String[] palabras2 = frase2.split(" ");
         System.out.println("Frase 1: " + frase1.trim() + "(" + palabras1.length + " palabras)");
