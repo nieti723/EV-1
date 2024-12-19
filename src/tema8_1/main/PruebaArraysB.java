@@ -76,7 +76,7 @@ public class PruebaArraysB {
                         System.out.println("1. Escriba \"nose\" para la diagonal que va desde noroeste hasta sureste");
                         System.out.println("2. Escriba \"neso\" para la diagonal que va desde noreste hasta suroeste");
                         diagonal = s.nextLine();
-                        if (!diagonal.equals("neso") && !diagonal.equals("nose")) {
+                        if (!diagonal.equalsIgnoreCase("neso") && !diagonal.equalsIgnoreCase("nose")) {
                             System.out.println("Opción incorrecta, inténtelo de nuevo.");
                             FuncionesArraysB29_34.salir();
                         }

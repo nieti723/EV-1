@@ -20,11 +20,12 @@ public class Ej3_tema8_2 {
             valido = true;
             System.out.print("Introduzca la frase a comprobar: ");
             frase = s.nextLine();
+            //Valida si la frase termina en un punto
             if (frase.indexOf(".")==-1) {
-                System.out.println("La frase debe contener un punto para finalizar");
                 valido = false;
             }
         } while (!valido);
+        //Comprueba si la frase tiene puntos suspensivos o no
         do {
             valido = true;
             if (frase.length()>frase.charAt(frase.indexOf("."))) {
@@ -33,5 +34,7 @@ public class Ej3_tema8_2 {
                 }
             }
         } while (!valido);
+        
+
     }
 }
