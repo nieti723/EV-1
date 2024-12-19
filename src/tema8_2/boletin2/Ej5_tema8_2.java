@@ -6,41 +6,25 @@ import java.util.Scanner;
 public class Ej5_tema8_2 {
     @SuppressWarnings("resource")
     public static void main(String[] args) throws InterruptedException, IOException {
-        Scanner s = new Scanner(System.in, "Windows-1252");
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        Scanner s = new Scanner(System.in);
+        
+        String palabra, letra;
 
-        String texto, frase1, frase2;
-        boolean valido = true;
 
-        do {
-            valido = true;
-            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            System.out.print("Introduzca el texto (las dos frases deben estar separadas por un punto): ");
-            texto = s.nextLine();
-            if (texto.length()>texto.indexOf(".")+1) {
-                if (texto.charAt(texto.indexOf(".") + 1) == '.') {
-                    valido = false;
-                }
+        System.out.print("Introduzca una palabra para voltearla: ");
+        palabra = s.next();
+
+        for (int i = 0; i < palabra.length(); i++) {
+            letra = palabra.substring(palabra.length()-1);
+            palabra = palabra.substring(0, palabra.length()-1);
+            palabra = letra + palabra;
+            if (i<palabra.length()-1) {
+                System.out.print(palabra + ", ");
+            }else{
+                System.out.print(palabra + " (stop).");
             }
-            if (texto.length()==texto.indexOf(".")+1) {
-                valido = false;
-            }
-            if (texto.indexOf(".")==-1) {
-                valido = false;
-            }
-            if (!valido) {
-                System.out.println("Debe de haber dos frases separadas por un punto");
-                System.out.print("Pulsa una tecla para continuar: ");
-                s.nextLine();
-            }
-        } while (!valido);
-        frase1 = texto.substring(0, texto.indexOf("."));
-        frase2 = texto.substring(texto.indexOf(".")+1);
-        if (frase2.charAt(0)==' ') {
-            frase2 = frase2.substring(1);
         }
-        String[] palabras1 = frase1.split(" ");
-        String[] palabras2 = frase2.split(" ");
-        System.out.println("Frase 1: " + frase1.trim() + "(" + palabras1.length + " palabras)");
-        System.out.println("Frase 2: " + frase2.trim() + "(" + palabras2.length + " palabras)");
+
     }
 }
