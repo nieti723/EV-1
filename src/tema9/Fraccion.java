@@ -12,6 +12,10 @@ public class Fraccion {
         numeroFraccion = cont;
     }
 
+    
+    public Fraccion() {
+    }
+
 
     public int getNumerador() {
         return numerador;
@@ -59,6 +63,21 @@ public class Fraccion {
 
 
     public Fraccion multiplica(Fraccion otra){
+        Fraccion res = new Fraccion();
 
+        res.numerador = this.numerador*otra.numerador;
+        res.denominador = this.denominador*otra.denominador;
+
+        return res;
+    }
+
+
+    public Fraccion divide(Fraccion otra){
+        Fraccion res = new Fraccion();
+
+        res.numerador = this.numerador*otra.denominador;
+        res.denominador = this.denominador*otra.numerador;
+
+        return res;
     }
 }

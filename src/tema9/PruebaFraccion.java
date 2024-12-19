@@ -8,10 +8,12 @@ public class PruebaFraccion {
 
         Fraccion f1 = new Fraccion(7, 3);
         Fraccion f2 = new Fraccion(4, 8);
-        Fraccion resultado = f1.multiplica(f1);
+        Fraccion resultado = new Fraccion();
 
         System.out.println(f1);
         System.out.println(f2);
-        f1.invierte();
+
+        resultado = f1.multiplica(f2);
+        System.out.println(resultado);
     }
 }
